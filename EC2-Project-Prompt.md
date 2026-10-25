@@ -140,6 +140,23 @@ Create a GitHub Actions IAM role that this repository can assume, with minimal p
     - Use Amazon Q to help with access and trust policy syntax
     - Use least priv principles avoid Admin access
     - Copy the AWS ARN to github > repo > secrets > actions "AWS_ARN"
+    - The user that does the CICD needs to only have an sts role and it needs to be update eg
+  ```
+      {
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AssumeDevRoles",
+      "Effect": "Allow",
+      "Action": "sts:AssumeRole",
+      "Resource": [
+        "arn:aws:iam::<ARN Number>:role/<Role name 1>",
+        "arn:aws:iam::<ARN Number>:role/<Role Nmae 2"
+      ]
+    }
+  ]
+}
+ ```
 
 ### Deliverable
 - IAM role exists
