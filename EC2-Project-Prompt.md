@@ -135,6 +135,11 @@ Create a GitHub Actions IAM role that this repository can assume, with minimal p
 3. **Verify** the role and trust policy are correctly configured.
 
 4. **Store the role ARN** as a GitHub secret: `AWS_ROLE_ARN`
+5. **Hints**
+    - Review previous policies
+    - Use Amazon Q to help with access and trust policy syntax
+    - Use least priv principles avoid Admin access
+    - Copy the AWS ARN to github > repo > secrets > actions "AWS_ARN"
 
 ### Deliverable
 - IAM role exists
