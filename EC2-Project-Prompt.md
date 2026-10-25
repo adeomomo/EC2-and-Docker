@@ -151,7 +151,7 @@ Create a GitHub Actions IAM role that this repository can assume, with minimal p
       "Action": "sts:AssumeRole",
       "Resource": [
         "arn:aws:iam::<ARN Number>:role/<Role name 1>",
-        "arn:aws:iam::<ARN Number>:role/<Role Nmae 2"
+        "arn:aws:iam::<ARN Number>:role/<Role Nmae 2>"
       ]
     }
   ]
